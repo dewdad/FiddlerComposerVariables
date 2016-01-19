@@ -32,15 +32,15 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.Token = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.tbFilename = new System.Windows.Forms.Label();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView
@@ -55,9 +55,9 @@
             this.Token,
             this.Value});
             this.dataGridView.DataSource = this.bs;
-            this.dataGridView.Location = new System.Drawing.Point(0, 30);
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(495, 266);
+            this.dataGridView.Size = new System.Drawing.Size(495, 296);
             this.dataGridView.TabIndex = 0;
             // 
             // Token
@@ -83,10 +83,12 @@
             this.flowLayoutPanel1.Controls.Add(this.btnLoad);
             this.flowLayoutPanel1.Controls.Add(this.btnSave);
             this.flowLayoutPanel1.Controls.Add(this.tbFilename);
+            this.flowLayoutPanel1.Enabled = false;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(495, 30);
             this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Visible = false;
             this.flowLayoutPanel1.WrapContents = false;
             // 
             // btnNew
@@ -128,13 +130,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Tab";
             this.Size = new System.Drawing.Size(495, 296);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
